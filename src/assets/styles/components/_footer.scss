@@ -1,0 +1,82 @@
+.footer {
+  padding-top: 8%;
+  @include respond(xs) {
+    padding-top: 5%;
+  }
+  &__top {
+    padding-top: 20px;
+    border-top: 1px solid var(--gray-lightest);
+    border-bottom: 1px solid var(--gray-lightest);
+    padding-bottom: 20px;
+    width: 100%;
+  }
+  &__nav {
+    margin: 40px -32px;
+    flex-wrap: wrap;
+  }
+  &__list {
+    color: var(--black);
+    padding: 0 32px;
+    width: 200px;
+    @include respond(sm) {
+      width: 48%;
+    }
+    @include respond(xs) {
+      width: 40%;
+    }
+    &-item {
+      padding: 10px;
+    }
+    &-link {
+      text-decoration: none;
+      color: var(--black);
+      position: relative;
+      &:before {
+        content: '';
+        z-index: 1;
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0;
+        background-color: var(--black);
+        height: 1px;
+        transition: width .3s linear;
+      }
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__bottom {
+    &-text {
+      color: var(--gray-light);
+      line-height: 20px;
+      margin: 16px 0;
+    }
+    &-desc {
+      padding: 8px;
+      text-align: center;
+      background: var(--gray-bg);
+      color: var(--primary-color);
+    }
+  }
+
+  &__social {
+    margin: 0 -14px;
+    &-item {
+      padding: 0 14px;
+      position: relative;
+      cursor: pointer;
+      &:hover {
+        .svg-icon {
+          transform: rotate(360deg);
+          fill: var(--primary-color);
+          transition: transform .3s ease, fill .3s ease;
+        }
+      }
+    }
+  }
+}

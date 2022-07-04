@@ -1,0 +1,35 @@
+.base-table {
+  width: 100%;
+  color: var(--black);
+  &__headers {
+    &-title {
+      color: var(--gray);
+      line-height: 20px;
+      padding: 14px 14px 14px 0;
+      white-space: nowrap;
+    }
+  }
+
+  &__content {
+    &--left {
+      text-align: left;
+    }
+    &--center {
+      text-align: center;
+    }
+    &--right {
+      text-align: right;
+    }
+  }
+
+  &__row {
+    border-bottom: 1px solid var(--gray-lightest);
+  }
+
+  &__col {
+    vertical-align: middle;
+    white-space: nowrap;
+    padding: 14px 14px 14px 0;
+    line-height: 16px;
+  }
+}

@@ -1,0 +1,53 @@
+.form-group {
+  &__email,
+  &__phone {
+    flex-basis: 38%;
+  }
+  &__inner {
+    position: relative;
+    width: 100%;
+    &.is-disabled {
+      .svg-icon {
+        opacity: 0.4;
+      }
+    }
+  }
+  &__prepand-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 14px;
+  }
+  &__input {
+    &.has-prepand-icon {
+      padding-left: 40px;
+    }
+  }
+  &__trigger {
+    color: var(--primary-color);
+    cursor: pointer;
+    &:hover {
+      span {
+        &:before {
+          width: 0;
+        }
+      }
+    }
+    span {
+      margin-left: 5px;
+      position: relative;
+      &:before {
+        content: '';
+        z-index: 1;
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        transition: width .3s ease;
+        height: 1px;
+        background: var(--primary-color);
+      }
+    }
+  }
+}

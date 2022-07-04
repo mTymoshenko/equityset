@@ -1,0 +1,12 @@
+.breadcrumbs {
+  display: flex;
+  margin: 0 -4px;
+  &__item {
+    text-transform: capitalize;
+    color: var(--gray-light);
+    padding: 0 4px;
+    span {
+      margin-left: 2px;
+    }
+  }
+}

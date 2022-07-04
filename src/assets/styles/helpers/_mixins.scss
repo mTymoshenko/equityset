@@ -1,0 +1,29 @@
+//--- Responsive
+@mixin respond($resolution) {
+  @if $resolution == lg {
+    @media (max-width: 1400px) {
+      @content
+    }
+  };
+  @if $resolution == md {
+    @media (max-width: 1240px) {
+      @content
+    }
+  };
+  @if $resolution == sm {
+    @media (max-width: 991px) {
+      @content
+    }
+  };
+  @if $resolution == xs {
+    @media (max-width: 767px) {
+      @content
+    }
+  };
+  @if $resolution == xxs {
+    @media (max-width: 559px) {
+      @content
+    }
+  };
+}
+//--- End

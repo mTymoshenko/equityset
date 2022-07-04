@@ -1,0 +1,14 @@
+$amounts: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100);
+$sides: (top, right, bottom, left);
+
+@each $space in $amounts {
+  @each $side in $sides {
+    .m-#{$side}-#{$space} {
+      margin-#{$side}: #{$space}px;
+    }
+
+    .p-#{$side}-#{$space} {
+      padding-#{$side}: #{$space}px;
+    }
+  }
+}

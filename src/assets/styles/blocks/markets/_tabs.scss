@@ -1,0 +1,41 @@
+.tabs {
+  border-bottom: 2px solid var(--gray-lightest);
+  @include respond(xs) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__item {
+    &:not(:first-of-type) {
+      margin-left: 40px;
+      @include respond(xs) {
+        margin-left: 0px
+      }
+    }
+    a {
+      padding: 15px 10px;
+      text-decoration: none;
+      color: var(--gray-light);
+      position: relative;
+      transition: color .3s ease;
+      &:before {
+        content: '';
+        z-index: 1;
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: transparent;
+        transition: background-color .3s ease;
+      }
+      &.is-active,
+      &:hover {
+        color: var(--primary-color);
+        &:before {
+          background-color: var(--primary-color);
+        }
+      }
+    }
+  }
+}

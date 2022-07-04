@@ -1,0 +1,61 @@
+.svg-icon {
+  fill: currentColor;
+  height: 20px;
+  width: 20px;
+  transition: fill .2s ease;
+}
+
+.icon-logo {
+  width: 96px;
+}
+
+.icon-edit {
+  width: 12px;
+  height: 12px;
+  fill: #788091;
+}
+
+.icon-delete {
+  width: 13px;
+  height: 13px;
+}
+
+.icon-info {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-plus {
+  width: 10px;
+  height: 10px;
+}
+
+.icon-close {
+  width: 12px;
+  height: 12px;
+}
+
+.icon-tw,
+.icon-instagram,
+.icon-facebook,
+.icon-draw,
+.icon-github {
+  fill: var(--gray);
+}
+
+.icon-search {
+  width: 14px;
+  height: 14px;
+  fill: var(--white);
+}
+
+.icon-recent {
+  fill: var(--gray);
+  width: 15px;
+  height: 15px;
+}
+
+.icon-user {
+  width: 9px;
+  height: 9px;
+}

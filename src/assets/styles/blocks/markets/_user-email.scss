@@ -1,0 +1,8 @@
+.user-email {
+  @include respond(sm) {
+    flex-direction: column;
+    .user-email__text {
+      margin: 10px 0 0;
+    }
+  }
+}

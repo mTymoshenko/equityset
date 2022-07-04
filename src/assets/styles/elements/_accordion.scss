@@ -1,0 +1,27 @@
+.accordion {
+  width: 100%;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    @include respond(xs) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    &-title {
+      color: var(--gray-light);
+    }
+    &-trigger {
+      color: var(--primary-color);
+      cursor: pointer;
+    }
+  }
+  &__body {
+    overflow: hidden;
+    height: auto;
+    transition: height 250ms ease;
+  }
+}

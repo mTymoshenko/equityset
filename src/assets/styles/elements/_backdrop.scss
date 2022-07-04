@@ -1,0 +1,25 @@
+.backdrop {
+  transition: all 5s;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--black);
+  z-index: 100;
+  opacity: 0.5;
+	animation-name: fadeInOpacity;
+	animation-timing-function: linear;
+	animation-duration: .2s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0.5;
+	}
+}

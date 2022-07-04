@@ -1,0 +1,49 @@
+@import './tabs';
+@import './notifications';
+@import './weekly';
+@import './delivery';
+@import './user-email';
+
+.markets {
+  min-height: 500px;
+  @include respond(xs) {
+    padding: 15px;
+  }
+  &-title {
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 10px;
+    color: var(--black);
+    margin-bottom: 8px
+  }
+  &__container {
+    max-width: 1400px;
+  }
+  &__notifications {
+    background: var(--gray-bg);
+    width: 100%;
+    border-radius: 12px;
+    padding: 16px 40px;
+    @include respond(xs) {
+      padding: 15px;
+      margin-top: 30px;
+      padding: 10px;
+    }
+  }
+}
+
+.action {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  border-radius: 4px;
+  transition: background-color .3s ease;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    background: var(--gray-bg);
+  }
+}

@@ -1,0 +1,49 @@
+.notifications {
+  &__title {
+    letter-spacing: -0.0045em;
+  }
+  &__subtitle {
+    color: var(--gray);
+  }
+  &__card {
+    padding: 13px 20px;
+  }
+  &__inner {
+    max-width: 848px;
+    width: 100%;
+  }
+  &__checkbox {
+    label {
+      display: flex;
+    }
+  }
+  &__item {
+    padding: 20px 0 20px 10px;
+    &:not(:first-of-type) {
+      border-top: 1px solid var(--gray-lightest);
+    }
+  }
+  &__header {
+    &-title {
+      color: var(--gray-light);
+      &.is-active {
+        color: var(--black);
+        font-weight: 900;
+      }
+    }
+    &-budge {
+      background: var(--primary-color);
+      color: var(--white);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+  }
+  &__content {
+    padding-left: 20px;
+    max-width: 420px;
+  }
+  &__text {
+    color: var(--gray-lighter);
+    line-height: 20px;
+  }
+}

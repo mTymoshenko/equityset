@@ -1,0 +1,31 @@
+.weekly {
+  &__item {
+    &:not(:first-of-type) {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--gray-lightest);
+    }
+    &-col {
+      flex-basis: 10%;
+      &--intro {
+        flex-basis: 40%;
+      }
+      &__title {
+        color: var(--gray-light);
+      }
+      &__subtitle {
+        color: var(--gray-lighter);
+      }
+  }
+    @include respond(xs) {
+      flex-wrap: wrap;
+      .weekly__item-col {
+        flex-basis: 20%;
+        &--intro {
+          flex-basis: 100%;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}

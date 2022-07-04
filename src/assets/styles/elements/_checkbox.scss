@@ -1,0 +1,112 @@
+.checkbox-l {
+  display: flex;
+  position: relative;
+  &__input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+    &:checked + label:after {
+      opacity: 1;
+      visibility: visible;
+    }
+    &:checked + label:before {
+      background-color: var(--primary-color);
+      border-color: var(--gray);
+    }
+    &:checked + .svg-icon {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__label {
+    position: relative;
+    cursor: pointer;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      transform: translate(-50%, -50%) rotate(45deg);
+      width: 4px;
+      height: 7px;
+      border: solid #fff;
+      border-width: 0 1.5px 1.5px 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .1s ease;
+    }
+    &:before {
+      content: '';
+      -webkit-appearance: none;
+      background-color: transparent;
+      transition: background-color .1s ease, border-color .1s ease;
+      border: 1px solid transparent;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    &_text {
+      font-size: 14px;
+      margin-left: 10px;
+      transition: color .3s ease;
+    }
+  }
+
+  &.is-main {
+    .checkbox-l {
+      &__label {
+        &:before {
+          border-color: var(--gray);
+        }
+        &:hover {
+          &:before {
+            border-color: var(--primary-color);
+          }
+        }
+      }
+      &__input {
+        &:checked + label:before {
+          border-color: var(--primary-color);
+        }
+      }
+    }
+  }
+  // &.is-secondary{
+  //   .checkbox-l {
+  //     &__label {
+  //       &:after {
+  //         left: 7px;
+  //         width: 6px;
+  //         height: 11px;
+  //         border-width: 0 2px 2px 0;
+  //       }
+  //       &:before {
+  //         width: 20px;
+  //         height: 20px;
+  //         border-radius: 50%;
+  //         border-width: 2px;
+  //         border-color: $color--gray;
+  //       }
+  //     }
+  //     &__input {
+  //       &:checked + label:before {
+  //         border-color: $color--blue;
+  //       }
+  //     }
+  //   }
+  // }
+  &.is-disabled {
+    .checkbox-l__label {
+      cursor: default;
+    }
+  }
+}

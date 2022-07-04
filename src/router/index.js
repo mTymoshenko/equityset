@@ -1,23 +1,43 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+// import Home from "../views/home";
+
+import Markets from "../views/markets";
+import Notifications from "../views/markets/notifications";
+import Profile from "../views/markets/profile";
+import Pricing from "../views/markets/pricing";
+import Portfolio from "../views/markets/portfolio";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
-    component: Home,
-  },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    path: "/markets",
+    name: "markets",
+    component: Markets,
+    redirect: "/markets/notifications",
+    children: [
+      {
+        path: "profile",
+        name: "profile",
+        component: Profile,
+      },
+      {
+        path: "pricing",
+        name: "pricing",
+        component: Pricing,
+      },
+      {
+        path: "notifications",
+        name: "notifications",
+        component: Notifications,
+      },
+      {
+        path: "portfolio",
+        name: "porfolio",
+        component: Portfolio,
+      },
+    ],
   },
 ];
 

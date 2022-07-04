@@ -1,0 +1,41 @@
+@mixin font($alias, $name) { 
+  @font-face {
+    font-family: $alias;
+    src: url("~@/assets/fonts/" + $name + ".woff2") format("woff2"), url("~@/assets/fonts/" + $name + ".woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+@include font("Inter-Regular", "Inter-Regular");
+@include font("Inter-Medium", "Inter-Medium");
+@include font("Inter-Bold", "Inter-Bold");
+
+@mixin reg {
+  font-family: "Inter-Regular", sans-serif, Arial;
+  font-weight: normal;
+}
+
+@mixin medium {
+  font-family: "Inter-Medium", sans-serif, Arial;
+  font-weight: normal;
+}
+
+@mixin bold { 
+  font-family: "Inter-Bold", sans-serif, Arial;
+  font-weight: normal;
+}
+
+
+.font-bold {
+  @include bold
+}
+
+.font-medium {
+  @include medium;
+}
+
+.font-400 {
+  @include reg;
+}

@@ -1,0 +1,11 @@
+.header {
+  border-bottom: 1px solid var(--gray-lightest);
+  position: relative;
+  @include respond(xs) {
+    .header__center {
+      .nav {
+        display: none;
+      }
+    }
+  }
+}

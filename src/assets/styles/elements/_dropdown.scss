@@ -1,0 +1,42 @@
+.dropdown {
+  position: relative;
+  outline: 0;
+  cursor: pointer;
+  &:focus {
+    outline: 0;
+  }
+  &.is-select {
+    .dropdown__body {
+      width: 100%;
+    }
+    .triangle {
+      right: 20px;
+    }
+  }
+  &__header {
+    padding-right: 20px;
+    .triangle {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 5px;
+      transition: transform .3s ease;
+      &.is-active {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+  &__body {
+    position: absolute;
+    top: 120%;
+    width: max-content;
+    right: 0;
+    background-color: var(--white);
+    border-radius: 4px;
+    box-shadow: 0 8px 8px rgba(28,50,89,.24);
+    z-index: 10;
+    &.is-full-width {
+      width: 100%;
+    }
+  }
+}
